@@ -1,46 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\BattleTank.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{579DED03-37A4-42F3-82C2-EA6645A67100}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\BattleTank.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\BattleTankEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{0A6FB932-6086-41D1-A31F-97E117646CDC}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\BattleTank">
-			<UniqueIdentifier>{6582D727-BF2E-4157-B3B3-A1C98F7BDE8C}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\BattleTank\BattleTank.Build.cs">
-			<Filter>Source\BattleTank</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\BattleTank\BattleTank.cpp">
-			<Filter>Source\BattleTank</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\BattleTank\BattleTank.h">
-			<Filter>Source\BattleTank</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\BattleTank\BattleTankGameModeBase.cpp">
-			<Filter>Source\BattleTank</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\BattleTank\BattleTankGameModeBase.h">
-			<Filter>Source\BattleTank</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\BattleTank.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{E7C054FF-37F0-4128-8B2A-53A0CE91E639}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\BattleTank.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\BattleTankEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{E536E271-5B3B-4544-AF1D-40E24200B864}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\BattleTank">
+      <UniqueIdentifier>{974B099F-43D5-45B2-A872-973DF2943890}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\BattleTank\BattleTank.Build.cs">
+      <Filter>Source\BattleTank</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\BattleTank\BattleTank.cpp">
+      <Filter>Source\BattleTank</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BattleTank\BattleTank.h">
+      <Filter>Source\BattleTank</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BattleTank\BattleTankGameModeBase.cpp">
+      <Filter>Source\BattleTank</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BattleTank\BattleTankGameModeBase.h">
+      <Filter>Source\BattleTank</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BattleTank\TankPlayerController.cpp">
+      <Filter>Source\BattleTank</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BattleTank\TankPlayerController.h">
+      <Filter>Source\BattleTank</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\BattleTank\Public">
+      <UniqueIdentifier>{a535b6c6-25b6-495b-9c33-faa8ef68a95e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\BattleTank\Private">
+      <UniqueIdentifier>{23ff1dec-4d6c-4e61-9124-4ebf237cbc5d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\BattleTank\Public\Tank.h">
+      <Filter>Source\BattleTank\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\BattleTank\Private\Tank.cpp">
+      <Filter>Source\BattleTank\Private</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
