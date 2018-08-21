@@ -60,6 +60,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATankPlayerController); \
 
 
 #define BattleTank_Source_BattleTank_TankPlayerController_h_16_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__LineTraceRange() { return STRUCT_OFFSET(ATankPlayerController, LineTraceRange); } \
 	FORCEINLINE static uint32 __PPO__CrosshairXLocation() { return STRUCT_OFFSET(ATankPlayerController, CrosshairXLocation); } \
 	FORCEINLINE static uint32 __PPO__CrosshairYLocation() { return STRUCT_OFFSET(ATankPlayerController, CrosshairYLocation); }
 
