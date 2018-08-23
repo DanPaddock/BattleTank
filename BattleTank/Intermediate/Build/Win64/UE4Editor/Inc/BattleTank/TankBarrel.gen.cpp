@@ -32,6 +32,14 @@ void EmptyLinkFunctionForGeneratedCodeTankBarrel() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinElevationDegrees_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinElevationDegrees;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxElevationDegrees_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxElevationDegrees;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxDegreesPerSecond_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxDegreesPerSecond;
@@ -52,6 +60,20 @@ void EmptyLinkFunctionForGeneratedCodeTankBarrel() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTankBarrel_Statics::NewProp_MinElevationDegrees_MetaData[] = {
+		{ "Category", "Setup" },
+		{ "ModuleRelativePath", "Public/TankBarrel.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UTankBarrel_Statics::NewProp_MinElevationDegrees = { UE4CodeGen_Private::EPropertyClass::Float, "MinElevationDegrees", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000000001, 1, nullptr, STRUCT_OFFSET(UTankBarrel, MinElevationDegrees), METADATA_PARAMS(Z_Construct_UClass_UTankBarrel_Statics::NewProp_MinElevationDegrees_MetaData, ARRAY_COUNT(Z_Construct_UClass_UTankBarrel_Statics::NewProp_MinElevationDegrees_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTankBarrel_Statics::NewProp_MaxElevationDegrees_MetaData[] = {
+		{ "Category", "Setup" },
+		{ "ModuleRelativePath", "Public/TankBarrel.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UTankBarrel_Statics::NewProp_MaxElevationDegrees = { UE4CodeGen_Private::EPropertyClass::Float, "MaxElevationDegrees", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000000001, 1, nullptr, STRUCT_OFFSET(UTankBarrel, MaxElevationDegrees), METADATA_PARAMS(Z_Construct_UClass_UTankBarrel_Statics::NewProp_MaxElevationDegrees_MetaData, ARRAY_COUNT(Z_Construct_UClass_UTankBarrel_Statics::NewProp_MaxElevationDegrees_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTankBarrel_Statics::NewProp_MaxDegreesPerSecond_MetaData[] = {
 		{ "Category", "Setup" },
 		{ "ModuleRelativePath", "Public/TankBarrel.h" },
@@ -59,6 +81,8 @@ void EmptyLinkFunctionForGeneratedCodeTankBarrel() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UTankBarrel_Statics::NewProp_MaxDegreesPerSecond = { UE4CodeGen_Private::EPropertyClass::Float, "MaxDegreesPerSecond", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000000001, 1, nullptr, STRUCT_OFFSET(UTankBarrel, MaxDegreesPerSecond), METADATA_PARAMS(Z_Construct_UClass_UTankBarrel_Statics::NewProp_MaxDegreesPerSecond_MetaData, ARRAY_COUNT(Z_Construct_UClass_UTankBarrel_Statics::NewProp_MaxDegreesPerSecond_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UTankBarrel_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTankBarrel_Statics::NewProp_MinElevationDegrees,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTankBarrel_Statics::NewProp_MaxElevationDegrees,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTankBarrel_Statics::NewProp_MaxDegreesPerSecond,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UTankBarrel_Statics::StaticCppClassTypeInfo = {
@@ -84,7 +108,7 @@ void EmptyLinkFunctionForGeneratedCodeTankBarrel() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UTankBarrel, 2004782842);
+	IMPLEMENT_CLASS(UTankBarrel, 2741032736);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UTankBarrel(Z_Construct_UClass_UTankBarrel, &UTankBarrel::StaticClass, TEXT("/Script/BattleTank"), TEXT("UTankBarrel"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UTankBarrel);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
