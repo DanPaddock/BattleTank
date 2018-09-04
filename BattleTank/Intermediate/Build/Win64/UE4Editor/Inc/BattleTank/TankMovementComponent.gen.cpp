@@ -17,15 +17,71 @@ void EmptyLinkFunctionForGeneratedCodeTankMovementComponent() {}
 	BATTLETANK_API UClass* Z_Construct_UClass_UTankMovementComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UNavMovementComponent();
 	UPackage* Z_Construct_UPackage__Script_BattleTank();
+	BATTLETANK_API UFunction* Z_Construct_UFunction_UTankMovementComponent_Initialize();
+	BATTLETANK_API UClass* Z_Construct_UClass_UTankTrack_NoRegister();
 	BATTLETANK_API UFunction* Z_Construct_UFunction_UTankMovementComponent_IntendMoveForward();
 // End Cross Module References
 	void UTankMovementComponent::StaticRegisterNativesUTankMovementComponent()
 	{
 		UClass* Class = UTankMovementComponent::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "Initialize", &UTankMovementComponent::execInitialize },
 			{ "IntendMoveForward", &UTankMovementComponent::execIntendMoveForward },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics
+	{
+		struct TankMovementComponent_eventInitialize_Parms
+		{
+			UTankTrack* LeftTrackToSet;
+			UTankTrack* RightTrackToSet;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RightTrackToSet_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_RightTrackToSet;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LeftTrackToSet_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_LeftTrackToSet;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::NewProp_RightTrackToSet_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::NewProp_RightTrackToSet = { UE4CodeGen_Private::EPropertyClass::Object, "RightTrackToSet", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000080080, 1, nullptr, STRUCT_OFFSET(TankMovementComponent_eventInitialize_Parms, RightTrackToSet), Z_Construct_UClass_UTankTrack_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::NewProp_RightTrackToSet_MetaData, ARRAY_COUNT(Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::NewProp_RightTrackToSet_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::NewProp_LeftTrackToSet_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::NewProp_LeftTrackToSet = { UE4CodeGen_Private::EPropertyClass::Object, "LeftTrackToSet", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000080080, 1, nullptr, STRUCT_OFFSET(TankMovementComponent_eventInitialize_Parms, LeftTrackToSet), Z_Construct_UClass_UTankTrack_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::NewProp_LeftTrackToSet_MetaData, ARRAY_COUNT(Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::NewProp_LeftTrackToSet_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::NewProp_RightTrackToSet,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::NewProp_LeftTrackToSet,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Setup" },
+		{ "ModuleRelativePath", "Public/TankMovementComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTankMovementComponent, "Initialize", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, sizeof(TankMovementComponent_eventInitialize_Parms), Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::PropPointers), 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UTankMovementComponent_Initialize()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTankMovementComponent_Initialize_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_UTankMovementComponent_IntendMoveForward_Statics
 	{
@@ -79,12 +135,16 @@ void EmptyLinkFunctionForGeneratedCodeTankMovementComponent() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_BattleTank,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UTankMovementComponent_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UTankMovementComponent_Initialize, "Initialize" }, // 2744655339
 		{ &Z_Construct_UFunction_UTankMovementComponent_IntendMoveForward, "IntendMoveForward" }, // 108238486
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTankMovementComponent_Statics::Class_MetaDataParams[] = {
+		{ "BlueprintSpawnableComponent", "" },
+		{ "ClassGroupNames", "Custom" },
 		{ "IncludePath", "TankMovementComponent.h" },
 		{ "ModuleRelativePath", "Public/TankMovementComponent.h" },
+		{ "ToolTip", "Responsible for driving the tank tracks" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UTankMovementComponent_Statics::StaticCppClassTypeInfo = {
@@ -110,7 +170,7 @@ void EmptyLinkFunctionForGeneratedCodeTankMovementComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UTankMovementComponent, 2705948189);
+	IMPLEMENT_CLASS(UTankMovementComponent, 4068719847);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UTankMovementComponent(Z_Construct_UClass_UTankMovementComponent, &UTankMovementComponent::StaticClass, TEXT("/Script/BattleTank"), TEXT("UTankMovementComponent"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UTankMovementComponent);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
