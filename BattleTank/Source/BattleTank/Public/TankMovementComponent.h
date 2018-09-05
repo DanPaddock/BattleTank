@@ -26,6 +26,9 @@ public:
 		UFUNCTION(BlueprintCallable, Category = Setup)
 		void IntendTurnRight(float Throw);
 
+		UFUNCTION(BlueprintCallable, Category = Setup)
+		void IntendTurnLeft(float Throw);
+
 private:
 		UTankTrack* LeftTrack = nullptr;
 		UTankTrack* RightTrack = nullptr;

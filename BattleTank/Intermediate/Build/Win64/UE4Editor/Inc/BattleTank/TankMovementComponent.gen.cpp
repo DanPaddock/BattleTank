@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeTankMovementComponent() {}
 	BATTLETANK_API UFunction* Z_Construct_UFunction_UTankMovementComponent_Initialize();
 	BATTLETANK_API UClass* Z_Construct_UClass_UTankTrack_NoRegister();
 	BATTLETANK_API UFunction* Z_Construct_UFunction_UTankMovementComponent_IntendMoveForward();
+	BATTLETANK_API UFunction* Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft();
 	BATTLETANK_API UFunction* Z_Construct_UFunction_UTankMovementComponent_IntendTurnRight();
 // End Cross Module References
 	void UTankMovementComponent::StaticRegisterNativesUTankMovementComponent()
@@ -28,6 +29,7 @@ void EmptyLinkFunctionForGeneratedCodeTankMovementComponent() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "Initialize", &UTankMovementComponent::execInitialize },
 			{ "IntendMoveForward", &UTankMovementComponent::execIntendMoveForward },
+			{ "IntendTurnLeft", &UTankMovementComponent::execIntendTurnLeft },
 			{ "IntendTurnRight", &UTankMovementComponent::execIntendTurnRight },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
@@ -118,6 +120,39 @@ void EmptyLinkFunctionForGeneratedCodeTankMovementComponent() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft_Statics
+	{
+		struct TankMovementComponent_eventIntendTurnLeft_Parms
+		{
+			float Throw;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Throw;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft_Statics::NewProp_Throw = { UE4CodeGen_Private::EPropertyClass::Float, "Throw", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000080, 1, nullptr, STRUCT_OFFSET(TankMovementComponent_eventIntendTurnLeft_Parms, Throw), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft_Statics::NewProp_Throw,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Setup" },
+		{ "ModuleRelativePath", "Public/TankMovementComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTankMovementComponent, "IntendTurnLeft", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, sizeof(TankMovementComponent_eventIntendTurnLeft_Parms), Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft_Statics::PropPointers), 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UTankMovementComponent_IntendTurnRight_Statics
 	{
 		struct TankMovementComponent_eventIntendTurnRight_Parms
@@ -172,6 +207,7 @@ void EmptyLinkFunctionForGeneratedCodeTankMovementComponent() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_UTankMovementComponent_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UTankMovementComponent_Initialize, "Initialize" }, // 2744655339
 		{ &Z_Construct_UFunction_UTankMovementComponent_IntendMoveForward, "IntendMoveForward" }, // 108238486
+		{ &Z_Construct_UFunction_UTankMovementComponent_IntendTurnLeft, "IntendTurnLeft" }, // 629555375
 		{ &Z_Construct_UFunction_UTankMovementComponent_IntendTurnRight, "IntendTurnRight" }, // 1172209171
 	};
 #if WITH_METADATA
@@ -206,7 +242,7 @@ void EmptyLinkFunctionForGeneratedCodeTankMovementComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UTankMovementComponent, 2967857305);
+	IMPLEMENT_CLASS(UTankMovementComponent, 2462290492);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UTankMovementComponent(Z_Construct_UClass_UTankMovementComponent, &UTankMovementComponent::StaticClass, TEXT("/Script/BattleTank"), TEXT("UTankMovementComponent"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UTankMovementComponent);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
