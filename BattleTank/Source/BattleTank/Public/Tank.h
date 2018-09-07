@@ -1,5 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+// Copyright Dan Paddock
 #pragma once
 
 #include "CoreMinimal.h"
@@ -20,12 +19,6 @@ public:
 	// Sets default values for this pawn's properties
 	ATank();
 
-	UFUNCTION(BlueprintCallable, Category = Setup)
-	void SetBarrelReference(UTankBarrel* BarrelToSet);
-
-	UFUNCTION(BlueprintCallable, Category = Setup)
-		void SetTurretReference(UTankTurret* TurretToSet);
-
 	void AimAt(FVector HitLocation);
 
 	UFUNCTION(BlueprintCallable, Category = Firing)
@@ -40,12 +33,6 @@ protected:
 	UTankMovementComponent* TankMovementComponent = nullptr;
 
 private:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 	UPROPERTY(EditDefaultsOnly, Category = Setup)
 	TSubclassOf<AProjectile> ProjectileBlueprint;
 
@@ -55,8 +42,7 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = Firing)
 	float ReloadTimeInSeconds = 3;
 
-	// Local barrel reference for spawning projectiles
-	UTankBarrel* Barrel = nullptr;
+	UTankBarrel* Barrel = nullptr; // TODO REMOVE
 
 	double LastFireTime = 0;
 
