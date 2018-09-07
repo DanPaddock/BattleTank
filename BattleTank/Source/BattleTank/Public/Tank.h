@@ -44,6 +44,8 @@ private:
 
 	UTankBarrel* Barrel = nullptr; // TODO REMOVE
 
+	virtual void BeginPlay() override;
+
 	double LastFireTime = 0;
 
 };
